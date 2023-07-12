@@ -367,6 +367,7 @@ GameObject:
   m_Component:
   - component: {fileID: 469612541}
   - component: {fileID: 469612540}
+  - component: {fileID: 469612542}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -407,6 +408,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &469612542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469612539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fceb50d85e47c4c8163f343ece4c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: 0
+  fireRate: 1
+  AmountOfShots: 1
+  Orb: {fileID: 5690034182116055307, guid: 072c3364c467ce34199421494caa64a3, type: 3}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +567,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1408467895}
   - component: {fileID: 1408467896}
+  - component: {fileID: 1408467898}
+  - component: {fileID: 1408467897}
+  - component: {fileID: 1408467899}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -585,6 +605,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576fbb18852566a4eb933e7eaa65b821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bullet: {fileID: 0}
+  horizontalSpeed: 4
+  verticalSpeed: 0
+  rotationalSpeed: 0
+  movingRight: 1
+  switchTime: 1.5
+  shootpattern: 0
+  movementpattern: 0
+--- !u!50 &1408467897
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408467894}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &1408467898
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408467894}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1408467899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408467894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b272e8e812d5e68448220df9efaaeb2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 10
+  CurrentHP: 1
 --- !u!1 &1723916906
 GameObject:
   m_ObjectHideFlags: 0
